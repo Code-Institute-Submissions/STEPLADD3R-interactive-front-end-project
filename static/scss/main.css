@@ -1,0 +1,307 @@
+#map {
+  height: 500px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transition: 0.25s all ease-in-out; }
+
+#map:hover {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175); }
+
+hr {
+  margin: 0;
+  border: 0;
+  border-top: 1px solid #e3e6f0; }
+
+.front-page--image {
+  object-fit: cover;
+  object-position: center;
+  height: 85vh;
+  width: 100%;
+  padding-top: 88px;
+  position: relative;
+  z-index: 2; }
+
+.x2 {
+  padding-top: 6rem !important;
+  padding-bottom: 6rem !important; }
+
+.height-85vh--lg {
+  height: 85vh; }
+
+.height-15vh--lg {
+  height: 15vh; }
+
+html, body {
+  font-family: 'Roboto', sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  color: #484848; }
+
+p {
+  color: #484848; }
+
+.front-page--header {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  position: relative;
+  z-index: 10; }
+
+.btn.btn-primary {
+  font-weight: 700;
+  background-color: #008489;
+  border-color: #008489;
+  color: #fff;
+  transition: 0.25s all ease-in-out; }
+  .btn.btn-primary:hover {
+    color: #fff;
+    background-color: #199094;
+    border-color: #199094;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); }
+  .btn.btn-primary:active {
+    background-color: #199094;
+    border-color: #199094; }
+  .btn.btn-primary.map {
+    background-color: #ff5a5f;
+    border-color: #ff5a5f;
+    color: #fff;
+    transition: 0.25s all ease-in-out; }
+    .btn.btn-primary.map:hover {
+      color: #fff;
+      background-color: #ff6a6f;
+      border-color: #ff6a6f;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); }
+    .btn.btn-primary.map:active {
+      background-color: #ff6a6f;
+      border-color: #ff6a6f; }
+
+.logo-icon {
+  font-size: 1.9rem;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  color: #fff; }
+
+nav.navbar {
+  background-color: transparent;
+  transition: 0.25s all ease-in-out;
+  padding: 1.5rem 1rem; }
+
+nav.navbar.scrolled {
+  background-color: #ff5a5f;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important; }
+
+nav.navbar .nav-link {
+  color: #fff; }
+
+nav.navbar .navbar-brand {
+  padding: 0; }
+
+.background--banner-top {
+  background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/U4GOIU-/videoblocks-paris-night-park-famous-eiffel-tower-view-panorama-4k-time-lapse-france_s-jwlcncx_thumbnail-full01.png");
+  background-position: left center !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center; }
+  .background--banner-top:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85vh;
+    background-image: -webkit-linear-gradient(115deg, rgba(255, 90, 95, 0.75), rgba(0, 132, 137, 0.75));
+    background-image: linear-gradient(115deg, rgba(255, 90, 95, 0.75), rgba(0, 132, 137, 0.75));
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; }
+  .background--banner-top .container {
+    position: relative;
+    z-index: 2; }
+
+.background--testimonials,
+.background--places {
+  background-color: #f9f9f9;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+.background--map {
+  background-color: #fff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+.background--footer {
+  background-color: #008489;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+.testimonial-img {
+  max-height: 100px;
+  border-radius: 100px;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.testimonial-content p,
+.testimonial-author p {
+  color: #a1a7af;
+  font-weight: 400; }
+
+.testimonial-author {
+  font-size: 0.75rem;
+  letter-spacing: .5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-top: 6px; }
+
+.place-item {
+  position: relative;
+  padding: 0;
+  transition: 0.25s all ease-in-out;
+  min-height: 375px;
+  max-height: 375px;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  height: auto; }
+  .place-item:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.36);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; }
+  .place-item.paris {
+    background-image: url("https://i.ytimg.com/vi/_FYKIhJZdaI/maxresdefault.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; }
+  .place-item.santorini {
+    background-image: url("https://www.telegraph.co.uk/content/dam/Travel/Destinations/Europe/Greece/Santorini/Santorini%20lead-xlarge.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; }
+  .place-item.rome {
+    background-image: url("https://www.hellomagazine.com/imagenes/travel/2018061449462/things-to-do-in-rome-3-days/0-243-749/Colosseum-Rome-t.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; }
+  .place-item.barcelona {
+    background-image: url("http://travelpicker.com/wp-content/uploads/2015/12/shutterstock_101032684-f-380x380.jpg"); }
+  .place-item:hover {
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+    transform: scale(1.02); }
+    .place-item:hover .place-button {
+      position: relative;
+      z-index: 2;
+      transform: translateY(30px); }
+  .place-item img,
+  .place-item p {
+    flex: 0 1 100%;
+    position: relative;
+    z-index: 2; }
+  .place-item img {
+    width: auto;
+    max-width: 75px;
+    min-height: 75px;
+    max-height: 75px;
+    margin: 0 auto 3rem auto; }
+  .place-item .icon {
+    flex: 0 1 100%;
+    text-align: center; }
+    .place-item .icon svg {
+      display: block;
+      width: auto;
+      max-width: 75px;
+      min-height: 75px;
+      max-height: 75px;
+      margin: 0 auto 3rem auto; }
+  .place-item p {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-weight: 700;
+    color: #fff; }
+    .place-item p:first-of-type {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.25rem;
+      font-size: 1.5rem; }
+  .place-item .place-button {
+    flex: 0 1 100%;
+    transform: translateY(115px);
+    transition: 0.25s all ease-in-out; }
+
+.white-popup {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: #fff;
+  padding: 3rem;
+  width: auto;
+  max-width: 1152px;
+  margin: 2rem auto;
+  min-height: 300px; }
+
+.mfp-close-btn-in .mfp-close {
+  width: 44px;
+  background-color: transparent;
+  transition: 0.25s all ease-in-out; }
+  .mfp-close-btn-in .mfp-close:hover {
+    color: black;
+    background-color: transparent; }
+
+.paris-slider img {
+  width: 100% !important;
+  max-height: 350px;
+  object-fit: cover;
+  object-position: center; }
+
+.footer-title {
+  color: #fff; }
+
+.footer-ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  .footer-ul li {
+    margin-bottom: 5px; }
+    .footer-ul li :last-of-type {
+      margin-bottom: 0; }
+    .footer-ul li a {
+      color: #fff;
+      transition: 0.25s all ease-in-out; }
+      .footer-ul li a:hover {
+        opacity: 0.8;
+        text-decoration: none; }
+
+.social-links li {
+  display: inline-block;
+  padding: 5px;
+  background-color: #fff;
+  border-radius: 50%;
+  height: 32.4px;
+  width: 32.4px;
+  text-align: center; }
+
+.social-links li a {
+  color: #ff5a5f; }
+
+/*# sourceMappingURL=main.css.map */

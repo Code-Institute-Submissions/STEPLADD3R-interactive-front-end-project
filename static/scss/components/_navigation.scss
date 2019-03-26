@@ -1,0 +1,19 @@
+nav.navbar {
+    background-color: transparent;
+    transition: $transition--250ms;
+    padding: 1.5rem 1rem;
+}
+
+nav.navbar.scrolled {
+    background-color: $primary-color;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
+}
+
+nav.navbar .nav-link {
+    color: #fff;
+    // padding: 2rem;
+}
+
+nav.navbar .navbar-brand {
+    padding: 0;
+}

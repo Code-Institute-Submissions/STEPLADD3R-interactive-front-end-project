@@ -1,32 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Where that?</title>
-    
+    <title>Interactive Front End Development Project</title>
+
     <!-- Styles -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" type="text/css" />
-</head>
-<body>
-    <!-- Header -->
-    <nav>
-        <div class="nav-wrapper">
-            <form action="">
-                <div class="input-field">
-                    <input id="search" type="search" required />
-                    <label for="search" class="label-icon"><i class="material-icons">search</i></label>
-                    <i class="material-icons">close</i>
-                </div>
-            </form>
-        </div>
-    </nav>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" type="text/css" />
     
+    <!-- Data Vis -->
+    <link rel="stylesheet" href="static/scss/dc.min.css" type="text/css" />
+    
+    <!-- Custom -->
+    <link rel="stylesheet" href="static/scss/main.css" type="text/css" />
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <a href="#!" class="navbar-brand"><i class="fas fa-map-marker-alt logo-icon"></i></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Popular Destinations</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item open-popup-link" href="#paris" data-mfp-src="#paris">France</a>
+                            <a class="dropdown-item open-popup-link" href="#santorini" data-mfp-src="#santorini">Greece</a>
+                            <a class="dropdown-item open-popup-link" href="#rome" data-mfp-src="#rome">Italy</a>
+                            <a class="dropdown-item" href="#">Morocco</a>
+                            <a class="dropdown-item" href="#">Portugal</a>
+                            <a class="dropdown-item" href="#">Spain</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="content" role="main">
+        <section class="d-lg-flex align-items-lg-end height-85vh--lg background--banner-top">
+            <div class="container-fluid">
+                <div class="row justify-content-lg-between align-items-lg-center">
+                    <div class="col-sm-12 col-lg-5 pl-5 pr-5">
+                        <h1 class="front-page--header">We'll help you find your perfect holiday destination</h1>
+                    </div>
+                    <div class="col-sm-12 col-lg-7 pr-0 mt-auto">
+                        <img src="static/img/1400x900.png" class="img-fluid front-page--image" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="d-lg-flex flex-row align-items-lg-center height-15vh--lg background--testimonials">
+            <div class="container-fluid">
+                <div class="row justify-content-lg-between align-items-lg-center">
+                    <div class="d-lg-flex flex-row align-items-lg-center col-sm-12 col-lg-6">
+                        <div class="col-sm-12 col-lg-3">
+                            <img src="static/img/400x400.png" class="testimonial-img" />
+                        </div>
+                        <div class="col-sm-12 col-lg-9">
+                            <div class="testimonial-content"><p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur eum, deleniti."</p></div>
+                            <div class="testimonial-author"><p>Guy 1, Business Insider</p></div>
+                        </div>
+                    </div>
+                    <div class="d-lg-flex flex-row align-items-lg-center col-sm-12 col-lg-6">
+                        <div class="col-sm-12 col-lg-3">
+                            <img src="static/img/400x400.png" class="testimonial-img" />
+                        </div>
+                        <div class="col-sm-12 col-lg-9">
+                            <div class="testimonial-content"><p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur eum, deleniti."</p></div>
+                            <div class="testimonial-author"><p>Guy 2, VINWIKI</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="section-map" class="background--map mt-5 mb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h1 class="title text-center mb-5">Popular Locations</h1>
+                        <div id="map"></div>
+                        <p class="text-center mt-5"><a id="reset-button" class="btn btn-primary map">Reset the Map</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <hr>
+        
+        <section id="section-places" class="background--places pt-5 pb-5 x2">
+            <div class="container">
+                <div class="row places-wrap">
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="place-item paris">
+                            <div class="icon">
+                                <img src="static/img/flags/france.svg" data-tippy="France" />
+                            </div>
+                            <p>Paris</p>
+                            <p>France</p>
+                            <div class="place-button text-center">
+                                <a href="#paris" data-mfp-src="#paris" class="btn btn-primary open-popup-link">I'm Interested!</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="place-item santorini">
+                            <div class="icon">
+                                <img src="static/img/flags/greece.svg" data-tippy="Greece" />
+                            </div>
+                            <p>Santorini</p>
+                            <p>Greece</p>
+                            <div class="place-button text-center">
+                                <a href="#santorini" data-mfp-src="#santorini" class="btn btn-primary open-popup-link">I'm Interested!</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div class="place-item rome">
+                            <div class="icon">
+                                <img src="static/img/flags/italy.svg" data-tippy="Italy" />
+                            </div>
+                            <p>Rome</p>
+                            <p>Italy</p>
+                            <div class="place-button text-center">
+                                <a href="#rome" data-mfp-src="#rome" class="btn btn-primary open-popup-link">I'm Interested!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer id="footer">
+        <section id="section-footer" class="background--footer pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-3 text-center">
+                        <a href="#!" class="navbar-brand"><i class="fas fa-map-marker-alt fa-3x" style="color: white;"></i></a>
+                    </div>
+                    <div class="col-sm-12 col-md-3">
+                        <h3 class="footer-title">Places</h3>
+                        <ul class="footer-ul">
+                            <li><a href="#paris" data-mfp-src="#paris" class="open-popup-link">Paris</a></li>
+                            <li><a href="#santorini" data-mfp-src="santorini" class="open-popup-link">Santorini</a></li>
+                            <li><a href="#rome" data-mfp-src="#rome" class="open-popup-link">Rome</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-12 col-md-3">
+                        <h3 class="footer-title">Help</h3>
+                        <ul class="footer-ul">
+                            <li><a href="mailto:emailus@codeinstituteproject.net">Email Address</a></li>
+                            <li><a href="tel:01234567890">01234 567 890</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-12 col-md-3">
+                        <h3 class="footer-title">Social Media</h3>
+                        <ul class="footer-ul social-links">
+                            <li><a href="#!" target="_blank" rel="noopener"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+                            <li><a href="#!" target="_blank" rel="noopener"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="#!" target="_blank" rel="noopener"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+                            <li><a href="#!" target="_blank" rel="noopener"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    
+    <!-- Popups -->
+    <div id="paris" class="white-popup mfp-hide">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>Paris</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div id="content" class="col-sm-12 col-md-8">
+                    <div class="paris-slider">
+                        <div><img src="https://www.cathaypacific.com/content/dam/destinations/paris/cityguide-gallery/paris-cityscape-920x500.jpg" /></div>
+                        <div><img src="https://cache-graphicslib.viator.com/graphicslib/mm/22/paris-le-louvre-281922-raw.jpg" /></div>
+                    </div>
+                    <p>Paris is the capital and most populous city of France, with an area of 105 square kilometres (41 square miles) and an official estimated population of 2,140,526 residents as of 1 January 2019. Since the 17th century, Paris has been one of Europe's major centres of finance, commerce, fashion, science, and the arts.</p>
+                    <p><strong>Main Attractions</strong></p>
+                    <ul>
+                        <li>Eiffel Tower</li>
+                        <li>Louvre Museum</li>
+                        <li>Cathédrale Notre-Dame de Paris</li>
+                        <li>Arc de Triomphe</li>
+                    </ul>
+                </div>
+                <div id="side" class="col-sm-12 col-md-4">
+                    <h4>Tourists Per Year</h4>
+                    <div id="paris-tourism"></div>
+                    
+                    <h4>Map</h4>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d167998.10803373056!2d2.206977064368058!3d48.858774103123785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2sParis%2C+France!5e0!3m2!1sen!2shk!4v1553063901439" width="322" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="santorini" class="white-popup mfp-hide">
+        test santorini<br><br><br><br>
+    </div>
+    
+    <div id="rome" class="white-popup mfp-hide">
+        test rome
+    </div>
+
     <!-- Scripts -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/tippy.js@4"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <!-- Maps/Places -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClJBhnacBkqqgo_iNer1exHc30rANGDno&libraries=places"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClJBhnacBkqqgo_iNer1exHc30rANGDno&libraries=places" async defer></script>
+    <script src="static/js/google-maps.js"></script>
+    <!-- Data Vis -->
+    <script src="static/js/d3.min.js"></script>
+    <script src="static/js/crossfilter.min.js"></script>
+    <script src="static/js/dc.min.js"></script>
+    <script src="static/js/queue.min.js"></script>
+    <script src="static/js/graphs.js"></script>
+    <!-- Custom -->
+    <script src="static/js/scripts.js"></script>
 </body>
+
 </html>

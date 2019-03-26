@@ -1,0 +1,37 @@
+.background--banner-top {
+    background-image: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/U4GOIU-/videoblocks-paris-night-park-famous-eiffel-tower-view-panorama-4k-time-lapse-france_s-jwlcncx_thumbnail-full01.png');
+    background-position: left center !important;
+    @include background;
+
+    &:after {
+        @include psuedo;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 85vh;
+        background-image: -webkit-linear-gradient(115deg, rgba(255, 90, 95, 0.75), rgba(0, 132, 137, 0.75));
+        background-image: linear-gradient(115deg, rgba(255, 90, 95, 0.75), rgba(0, 132, 137, 0.75));
+        @include background;
+    }
+
+    .container {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.background--testimonials,
+.background--places {
+    background-color: #f9f9f9;
+    @include background;
+}
+
+.background--map {
+    background-color: #fff;
+    @include background;
+}
+
+.background--footer {
+    background-color: $secondary-color;
+    @include background;
+}

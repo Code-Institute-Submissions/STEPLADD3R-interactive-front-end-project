@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,GAAI;EACA,WAAW,EAAE,eAAe;EAC5B,cAAc,EAAE,eAAe;;AAGnC,gBAAiB;EACb,MAAM,EAAE,IAAI;;AAGhB,gBAAiB;EACb,MAAM,EAAE,IAAI",
+"sources": ["_flexi-height.scss"],
+"names": [],
+"file": "_flexi-height.css"
+}
