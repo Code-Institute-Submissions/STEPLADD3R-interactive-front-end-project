@@ -61,6 +61,24 @@ function initialize() {
             map.setZoom(3);
             map.setCenter({lat:47.5260, lng:15.2551});
             clearMarkers(markers);
+            
+            // Update - add Search
+            google.maps.event.addListener(marker, 'click', function() {
+                map.setZoom(12);
+                map.setCenter(this.position);
+    
+                request = {
+                    location: this.position,
+                    radius: 8047 * 2,
+                    types: ['amusement_park', 'art_gallery', 'bar', 'museum', 'night_club', 'shopping_mall', 'zoo'],
+                    fields: ['name', 'formatted_address', 'website',],
+                };
+    
+                infowindow = new google.maps.InfoWindow();
+    
+                service = new google.maps.places.PlacesService(map);
+                service.nearbySearch(request, callback);
+            });
         });
     }
     
