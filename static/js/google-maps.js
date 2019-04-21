@@ -63,6 +63,47 @@ function initialize() {
             clearMarkers(markers);
         });
     }
+    
+    // Update - add Search
+    let searchBox = new google.maps.places.SearchBox(document.getElementById('place-search-box'));
+    
+    google.maps.event.addListener(searchBox, 'places_changed', function() {
+        // console.log(searchBox.getPlaces());
+        
+        clearMarkers(markers);
+        
+        let places = searchBox.getPlaces();
+        let bounds = new google.maps.LatLngBounds();
+        let place;
+        
+        for (i = 0; place = places[i]; i++) {
+            // marker.setPosition(place.geometry.location);
+            
+            marker = new google.maps.Marker({
+                animation: animation,
+                position: place.geometry.location,
+                map: map,
+                title: document.getElementById('place-search-box').value,
+            });
+            
+            bounds.extend(place.geometry.location);
+            
+            request = {
+                location: place.geometry.location,
+                radius: 8047 * 2,
+                types: ['amusement_park', 'art_gallery', 'bar', 'museum', 'night_club', 'shopping_mall', 'zoo'],
+                fields: ['name', 'formatted_address', 'website',],
+            };
+
+            infowindow = new google.maps.InfoWindow();
+
+            service = new google.maps.places.PlacesService(map);
+            service.nearbySearch(request, callback);
+        }
+        
+        map.fitBounds(bounds);
+        map.setZoom(12);
+    });
 }
 
 function callback(results, status) {
