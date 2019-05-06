@@ -32,6 +32,11 @@ Here's a list of technologies used:
 5. [Cloud9/C9](https://c9.io) - IDE that I used to write my code / to run the code.
 6. [Git](https://git-scm.com/) - I used git to ensure I had proper version control.
 
+### Deployment
+To deploy my website to Github Pages was simple. I went to settings, scrolled down to Github Pages and selected my repositories master from the source and hit save.
+
+Currently there is no difference between the deployment version and the development version but in the future, it may be cool to branch out and keep the master version running whilst using a separate branch to test new things.
+
 ### Credits
 [Google Maps](https://developers.google.com/maps/documentation/) - Used for Google Maps
 [D3](https://d3js.org/) - Used for Data Visualisation
