@@ -1,5 +1,6 @@
 let map;
 let markers = [];
+const MARKERS = [];
 
 function initialize() {
     let center = new google.maps.LatLng(47.5260, 15.2551);
@@ -25,7 +26,7 @@ function initialize() {
 
     create_locations(map, locations);
     
-    external_marker_links(markers); // Update -- append markers to menu
+    external_marker_links(MARKERS); // Update -- append markers to menu
 
     create_locations_from_search(map, locations);
 
@@ -51,7 +52,8 @@ function create_locations(map, locations) {
             title: locations[i][0],
         });
         
-        markers.push(marker); // Update -- append markers to menu
+        MARKERS.push(marker); // Update -- append markers to menu
+        console.log(MARKERS);
 
         get_markers(map, marker);
     }
@@ -76,15 +78,15 @@ function get_markers(map, marker) {
     });
 }
 
-function external_marker_links(markers) {
+function external_marker_links(MARKERS) {
     // Update -- append markers to menu
     document.addEventListener('click', function(e) {
         if (!e.target.matches('.dropdown-item')) return;
     
         e.preventDefault();
     
-        google.maps.event.trigger(markers[e.target.getAttribute('data-marker-id')], 'click');
-        console.log(markers[e.target.getAttribute('data-marker-id')]);
+        google.maps.event.trigger(MARKERS[e.target.getAttribute('data-marker-id')], 'click');
+        console.log(MARKERS[e.target.getAttribute('data-marker-id')]);
     });
     // 
 }
