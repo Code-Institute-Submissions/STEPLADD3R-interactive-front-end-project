@@ -1,6 +1,6 @@
 let map;
+const MARKERS = []; // Update -- append markers to menu
 let markers = [];
-const MARKERS = [];
 
 function initialize() {
     let center = new google.maps.LatLng(47.5260, 15.2551);
@@ -53,7 +53,6 @@ function create_locations(map, locations) {
         });
         
         MARKERS.push(marker); // Update -- append markers to menu
-        console.log(MARKERS);
 
         get_markers(map, marker);
     }

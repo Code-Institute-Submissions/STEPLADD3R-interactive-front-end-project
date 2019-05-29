@@ -1,0 +1,17 @@
+#paris-tourism {
+    svg {
+        rect.bar {
+            fill: $secondary-color;
+        }
+        
+        .tick text {
+            font-family: 'Roboto', sans-serif;
+            color: #484848;
+        }
+        
+        .axis path,
+        .axis line {
+            stroke: none;
+        }
+    }
+}

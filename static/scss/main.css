@@ -304,4 +304,13 @@ nav.navbar .navbar-brand {
 .social-links li a {
   color: #ff5a5f; }
 
+#paris-tourism svg rect.bar {
+  fill: #008489; }
+#paris-tourism svg .tick text {
+  font-family: 'Roboto', sans-serif;
+  color: #484848; }
+#paris-tourism svg .axis path,
+#paris-tourism svg .axis line {
+  stroke: none; }
+
 /*# sourceMappingURL=main.css.map */
