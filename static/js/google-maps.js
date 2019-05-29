@@ -20,21 +20,38 @@ function initialize() {
         ['Lisbon, Portugal', 38.7223, -9.1393],
         ['Barcelona, Spain', 41.3851, 2.1734],
     ];
+    
+    let autocomplete = new google.maps.places.Autocomplete(document.getElementById('place-search-box'));
 
-    loop_over_locations(map, locations);
+    create_locations(map, locations);
+    
+    external_marker_links(markers); // Update -- append markers to menu
 
-    places_search_loop_over_locations(map, locations);
+    create_locations_from_search(map, locations);
 
     reset_map(map);
 }
 
-function loop_over_locations(map, locations) {
+function create_locations(map, locations) {
     for (i = 0; i < locations.length; i++) {
+        
+        // Update -- append markers to menu
+        const locations_menu = document.getElementById('locations-menu');
+        locations_menu.appendChild(document.createElement('a'));
+        
+        let locations_menu_links = locations_menu.children;
+        locations_menu_links[i].setAttribute('class', 'dropdown-item');
+        locations_menu_links[i].setAttribute('data-marker-id', i);
+        locations_menu_links[i].setAttribute('href', '#');
+        locations_menu_links[i].innerText = locations[i][0];
+        
         let marker = new google.maps.Marker({
             position: new google.maps.LatLng(locations[i][1], locations[i][2]),
             map: map,
             title: locations[i][0],
         });
+        
+        markers.push(marker); // Update -- append markers to menu
 
         get_markers(map, marker);
     }
@@ -48,8 +65,6 @@ function get_markers(map, marker) {
         let request = {
             location: this.position,
             radius: 8047 * 2,
-            // types: ['amusement_park', 'art_gallery', 'bar', 'museum', 'night_club', 'shopping_mall', 'zoo',],
-            // types: [document.getElementById('place-types-select').value],
             types: document.getElementById('place-types-select').addEventListener('change', function(){ this.value; }),
             fields: ['name', 'formatted_address', 'website',],
         };
@@ -59,6 +74,19 @@ function get_markers(map, marker) {
         let service = new google.maps.places.PlacesService(map);
         service.nearbySearch(request, callback);
     });
+}
+
+function external_marker_links(markers) {
+    // Update -- append markers to menu
+    document.addEventListener('click', function(e) {
+        if (!e.target.matches('.dropdown-item')) return;
+    
+        e.preventDefault();
+    
+        google.maps.event.trigger(markers[e.target.getAttribute('data-marker-id')], 'click');
+        console.log(markers[e.target.getAttribute('data-marker-id')]);
+    });
+    // 
 }
 
 function callback(results, status) {
@@ -105,7 +133,7 @@ function create_marker(place) {
     return marker;
 }
 
-function places_search_loop_over_locations(map, locations) {
+function create_locations_from_search(map, locations) {
     document.getElementById('place-search-button').onclick = function() {
         const search_box_input = document.getElementById('place-search-box');
 
@@ -124,17 +152,30 @@ function geocode(search_box_input, locations) {
 
     geocoder.geocode({'address': search_box_input.value}, function(results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
-            console.log(results[0].geometry.location);
-            console.log(results[0].geometry.location.lat());
-            console.log(results[0].geometry.location.lng());
-
             let location = results[0].geometry.location;
             let lat = location.lat();
             let lng = location.lng();
 
             locations.push([search_box_input.value, lat, lng]);
 
-            loop_over_locations(map, locations);
+            create_locations(map, locations);
+            
+            // New
+            map.setZoom(12);
+            map.setCenter({lat:lat, lng:lng});
+    
+            let request = {
+                location: {lat:lat, lng:lng},
+                radius: 8047 * 2,
+                types: document.getElementById('place-types-select').addEventListener('change', function(){ this.value; }),
+                fields: ['name', 'formatted_address', 'website',],
+            };
+    
+            let infowindow = new google.maps.InfoWindow();
+    
+            let service = new google.maps.places.PlacesService(map);
+            service.nearbySearch(request, callback);
+            //
         }
     });
 }

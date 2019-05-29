@@ -35,14 +35,9 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Popular Destinations</a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item open-popup-link" href="#paris" data-mfp-src="#paris">France</a>
-                            <a class="dropdown-item open-popup-link" href="#santorini" data-mfp-src="#santorini">Greece</a>
-                            <a class="dropdown-item open-popup-link" href="#rome" data-mfp-src="#rome">Italy</a>
-                            <a class="dropdown-item" href="#">Morocco</a>
-                            <a class="dropdown-item" href="#">Portugal</a>
-                            <a class="dropdown-item" href="#">Spain</a>
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Popular Locations</a>
+                        <div id="locations-menu" class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <!-- Populate by google-maps.js locations -->
                         </div>
                     </li>
                 </ul>
@@ -95,12 +90,14 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <h1 class="title text-center mb-5">Popular Locations</h1>
-                        
-                        <div id="place-search" class="mb-2">
+                    </div>
+                    <div class="col-sm-12 col-md-6 mb-3">
+                        <div id="place-search">
                             <input type="text" id="place-search-box" name="place-search-box" class="form-control" placeholder="Enter a Destination..." />
                         </div>
-                        
-                        <div id="place-types" class="mb-2">
+                    </div>
+                    <div class="col-sm-12 col-md-6 mb-3">
+                        <div id="place-types">
                             <select id="place-types-select" class="selectpicker" multiple>
                                 <option value="amusement_park">Amusement Park</option>
                                 <option value="art_gallery">Art Gallery</option>
@@ -111,8 +108,9 @@
                                 <option value="zoo">Zoo</option>
                             </select>
                         </div>
-                        
-                        <input id="place-search-button" class="btn btn-primary mb-2" type="button" value="Search">
+                    </div>
+                    <div class="col-sm-12">
+                        <input id="place-search-button" class="btn btn-primary mb-3" type="button" value="Search" style="width: 100%;">
                         
                         <style>
                             .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
