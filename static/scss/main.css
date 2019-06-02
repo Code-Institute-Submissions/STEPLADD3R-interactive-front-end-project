@@ -304,13 +304,21 @@ nav.navbar .navbar-brand {
 .social-links li a {
   color: #ff5a5f; }
 
-#paris-tourism svg rect.bar {
+#paris-tourism svg rect.bar,
+#santorini-tourism svg rect.bar,
+#rome-tourism svg rect.bar {
   fill: #008489; }
-#paris-tourism svg .tick text {
+#paris-tourism svg .tick text,
+#santorini-tourism svg .tick text,
+#rome-tourism svg .tick text {
   font-family: 'Roboto', sans-serif;
   color: #484848; }
 #paris-tourism svg .axis path,
-#paris-tourism svg .axis line {
+#paris-tourism svg .axis line,
+#santorini-tourism svg .axis path,
+#santorini-tourism svg .axis line,
+#rome-tourism svg .axis path,
+#rome-tourism svg .axis line {
   stroke: none; }
 
 /*# sourceMappingURL=main.css.map */

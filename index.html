@@ -13,8 +13,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" type="text/css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" type="text/css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" type="text/css" />
     
     <!-- Data Vis -->
     <link rel="stylesheet" href="static/scss/dc.min.css" type="text/css" />
@@ -138,7 +136,7 @@
                             <p>Paris</p>
                             <p>France</p>
                             <div class="place-button text-center">
-                                <a href="#paris" data-mfp-src="#paris" class="btn btn-primary open-popup-link">I'm Interested!</a>
+                                <a href="#paris" data-mfp-src="#paris" class="btn btn-primary open-popup-link" data-destination="paris">I'm Interested!</a>
                             </div>
                         </div>
                     </div>
@@ -150,7 +148,7 @@
                             <p>Santorini</p>
                             <p>Greece</p>
                             <div class="place-button text-center">
-                                <a href="#santorini" data-mfp-src="#santorini" class="btn btn-primary open-popup-link">I'm Interested!</a>
+                                <a href="#santorini" data-mfp-src="#santorini" class="btn btn-primary open-popup-link" data-destination="santorini">I'm Interested!</a>
                             </div>
                         </div>
                     </div>
@@ -162,7 +160,7 @@
                             <p>Rome</p>
                             <p>Italy</p>
                             <div class="place-button text-center">
-                                <a href="#rome" data-mfp-src="#rome" class="btn btn-primary open-popup-link">I'm Interested!</a>
+                                <a href="#rome" data-mfp-src="#rome" class="btn btn-primary open-popup-link" data-destination="rome">I'm Interested!</a>
                             </div>
                         </div>
                     </div>
@@ -181,9 +179,9 @@
                     <div class="col-sm-12 col-md-3">
                         <h3 class="footer-title">Places</h3>
                         <ul class="footer-ul">
-                            <li><a href="#paris" data-mfp-src="#paris" class="open-popup-link">Paris</a></li>
-                            <li><a href="#santorini" data-mfp-src="santorini" class="open-popup-link">Santorini</a></li>
-                            <li><a href="#rome" data-mfp-src="#rome" class="open-popup-link">Rome</a></li>
+                            <li><a href="#paris" data-mfp-src="#paris" class="open-popup-link" data-destination="paris">Paris</a></li>
+                            <li><a href="#santorini" data-mfp-src="santorini" class="open-popup-link" data-destination="santorini">Santorini</a></li>
+                            <li><a href="#rome" data-mfp-src="#rome" class="open-popup-link" data-destination="rome">Rome</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-12 col-md-3">
@@ -207,20 +205,14 @@
         </section>
     </footer>
     
+    <div id="select-destination"></div>
+    
     <!-- Popups -->
     <div id="paris" class="white-popup mfp-hide">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12">
-                    <h3>Paris</h3>
-                </div>
-            </div>
-            <div class="row">
                 <div id="content" class="col-sm-12 col-md-8">
-                    <div class="paris-slider">
-                        <div><img src="https://www.cathaypacific.com/content/dam/destinations/paris/cityguide-gallery/paris-cityscape-920x500.jpg" /></div>
-                        <div><img src="https://cache-graphicslib.viator.com/graphicslib/mm/22/paris-le-louvre-281922-raw.jpg" /></div>
-                    </div>
+                    <h4>Paris</h4>
                     <p>Paris is the capital and most populous city of France, with an area of 105 square kilometres (41 square miles) and an official estimated population of 2,140,526 residents as of 1 January 2019. Since the 17th century, Paris has been one of Europe's major centres of finance, commerce, fashion, science, and the arts.</p>
                     <p><strong>Main Attractions</strong></p>
                     <ul>
@@ -233,17 +225,62 @@
                 <div id="side" class="col-sm-12 col-md-4">
                     <h4>Tourists Per Year</h4>
                     <div id="paris-tourism"></div>
+                    
+                    <h4>Favourite Foods</h4>
+                    <div id="paris-foods"></div>
                 </div>
             </div>
         </div>
     </div>
     
     <div id="santorini" class="white-popup mfp-hide">
-        test santorini<br><br><br><br>
+        <div class="container">
+            <div class="row">
+                <div id="content" class="col-sm-12 col-md-8">
+                    <h4>Santorini</h4>
+                    <p>Santorini, officially Thira and classic Greek Thera, is an island in the southern Aegean Sea, about 200 km (120 mi) southeast of Greece's mainland. It is the largest island of a small, circular archipelago, which bears the same name and is the remnant of a volcanic caldera. It forms the southernmost member of the Cyclades group of islands, with an area of approximately 73 km2 (28 sq mi) and a 2011 census population of 15,550.</p>
+                    <p><strong>Main Attractions</strong></p>
+                    <ul>
+                        <li>Akrotiri</li>
+                        <li>Santorini Caldera</li>
+                        <li>Ancient Thera</li>
+                        <li>Santo</li>
+                    </ul>
+                </div>
+                <div id="side" class="col-sm-12 col-md-4">
+                    <h4>Tourists Per Year</h4>
+                    <div id="santorini-tourism"></div>
+                    
+                    <h4>Favourite Foods</h4>
+                    <div id="santorini-foods"></div>
+                </div>
+            </div>
+        </div>
     </div>
     
     <div id="rome" class="white-popup mfp-hide">
-        test rome
+        <div class="container">
+            <div class="row">
+                <div id="content" class="col-sm-12 col-md-8">
+                    <h4>Rome</h4>
+                    <p>Rome is the capital city and a special comune of Italy (named Comune di Roma Capitale). Rome also serves as the capital of the Lazio region. With 2,872,800 residents in 1,285 km2 (496.1 sq mi), it is also the country's most populated comune. It is the fourth most populous city in the European Union by population within city limits.</p>
+                    <p><strong>Main Attractions</strong></p>
+                    <ul>
+                        <li>Colosseum</li>
+                        <li>St. Peter's Basilica</li>
+                        <li>Roman Forum</li>
+                        <li>Trevi Fountain</li>
+                    </ul>
+                </div>
+                <div id="side" class="col-sm-12 col-md-4">
+                    <h4>Tourists Per Year</h4>
+                    <div id="rome-tourism"></div>
+                    
+                    <h4>Favourite Foods</h4>
+                    <div id="rome-foods"></div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Scripts -->
@@ -253,7 +290,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <!-- Maps/Places -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClJBhnacBkqqgo_iNer1exHc30rANGDno&libraries=places" async defer></script>
     <script src="static/js/google-maps.js"></script>

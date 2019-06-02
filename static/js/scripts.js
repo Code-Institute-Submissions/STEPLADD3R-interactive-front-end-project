@@ -17,13 +17,7 @@ jQuery(document).ready(function($) {
     })
 });
 
-// // Slick
 jQuery(document).ready(function($) {
-    $('.paris-slider').slick({
-        dots: true,
-        infinite: true,
-        speed: 500,
-        fade: true,
-        cssEase: 'linear'
-    });
-});
+    $('.dc-select-menu').attr('disabled', 'disabled');
+    $('.dc-select-menu').css('display', 'none');
+})
