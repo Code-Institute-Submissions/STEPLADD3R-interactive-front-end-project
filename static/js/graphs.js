@@ -31,7 +31,6 @@ function makeGraphs(error, tourismData) {
 function select_destination(ndx) {
     var destination_dim = ndx.dimension(dc.pluck('destination'));
     var destination_group = destination_dim.group();
-    var destination = null;
     
     document.addEventListener('click', function(e) {
         if (!e.target.matches('.open-popup-link')) return;
@@ -39,15 +38,18 @@ function select_destination(ndx) {
         e.preventDefault();
             
         var destination = e.target.getAttribute('data-destination').toString();
-        console.log(destination)
+        // document.getElementById('select-destination').value = destination;
+        d3.select('#select-destination').property('value', destination);
         
-        dc.redrawAll();
+        menu.replaceFilter(destination);
+        dc.events.trigger(function() {
+            menu.redrawGroup();
+        });
     });
     
-    dc.selectMenu('#select-destination')
+    var menu = dc.selectMenu('#select-destination')
         .dimension(destination_dim)
-        .group(destination_group)
-        .filter(destination);
+        .group(destination_group);
 }
 
 function show_paris_tourism(ndx) {
@@ -92,6 +94,7 @@ function show_santorini_tourism(ndx) {
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
         // .xAxisLabel('Arrivals Per Year')
+        .elasticY(true)
         .yAxis().ticks(4)
 }
 
@@ -114,5 +117,6 @@ function show_rome_tourism(ndx) {
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
         // .xAxisLabel('Arrivals Per Year')
+        .elasticY(true)
         .yAxis().ticks(4)
 }
