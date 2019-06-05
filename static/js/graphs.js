@@ -38,7 +38,7 @@ function select_destination(ndx) {
         e.preventDefault();
             
         var destination = e.target.getAttribute('data-destination').toString();
-        // document.getElementById('select-destination').value = destination;
+        d3.select('#select-destination').property('display', 'none');
         d3.select('#select-destination').property('value', destination);
         
         menu.replaceFilter(destination);

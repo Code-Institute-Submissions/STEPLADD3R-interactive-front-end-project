@@ -245,7 +245,7 @@ nav.navbar .navbar-brand {
       font-size: 1.5rem; }
   .place-item .place-button {
     flex: 0 1 100%;
-    transform: translateY(115px);
+    transform: translateY(30px);
     transition: 0.25s all ease-in-out; }
 
 .white-popup {

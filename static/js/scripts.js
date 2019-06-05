@@ -14,10 +14,14 @@ jQuery(document).ready(function($) {
     $('.open-popup-link').magnificPopup({
         type: 'inline',
         midClick: true,
-    })
+    });
 });
 
-jQuery(document).ready(function($) {
-    $('.dc-select-menu').attr('disabled', 'disabled');
-    $('.dc-select-menu').css('display', 'none');
-})
+
+$('.image-popup img').click(function (e) {
+    e.stopPropagation();
+    e.preventDefault();
+    setTimeout(function(){
+      $('.image-popup').click();
+    }, 1000);       
+});
