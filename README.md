@@ -38,10 +38,9 @@ To deploy my website to Github Pages was simple. I went to settings, scrolled do
 Currently there is no difference between the deployment version and the development version but in the future, it may be cool to branch out and keep the master version running whilst using a separate branch to test new things.
 
 ### Credits
-[Google Maps](https://developers.google.com/maps/documentation/) - Used for Google Maps
-[D3](https://d3js.org/) - Used for Data Visualisation
-[DC](https://dc-js.github.io/dc.js/) - Used for Data Visualisation
-[Crossfilter](https://square.github.io/crossfilter/) - Used for Data Visualisation
-[Tippy](https://atomiks.github.io/tippyjs/) - Used for setting up tooltips
-[Slick Carousel](https://kenwheeler.github.io/slick/) - Used for creating the image carousels
-[Magnific Popup](https://dimsemenov.com/plugins/magnific-popup/) - Used for creating the popup modals
+[Google Maps](https://developers.google.com/maps/documentation/) - Used for Google Maps  
+[D3](https://d3js.org/) - Used for Data Visualisation  
+[DC](https://dc-js.github.io/dc.js/) - Used for Data Visualisation  
+[Crossfilter](https://square.github.io/crossfilter/) - Used for Data Visualisation  
+[Tippy](https://atomiks.github.io/tippyjs/) - Used for setting up tooltips  
+[Magnific Popup](https://dimsemenov.com/plugins/magnific-popup/) - Used for creating the popup modals  

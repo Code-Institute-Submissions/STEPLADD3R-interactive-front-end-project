@@ -57,8 +57,11 @@ function show_paris_tourism(ndx) {
     // create our dimension, in this case
     // i pluck the year column of the CSV
     var year_dim = ndx.dimension(dc.pluck('year'));
+    var favourite_foods_dim = ndx.dimension(dc.pluck('favourite.foods'));
     // group the data on tourist.arrivals dim
     var arrivals_per_year = year_dim.group().reduceSum(dc.pluck('tourist.arrivals'));
+    var favourite_foods_votes = favourite_foods_dim.group().reduceSum(dc.pluck('favourite.foods.votes'));
+    
     
     // use dc.barChart to create bar chart
     dc.barChart('#paris-tourism')
@@ -73,6 +76,12 @@ function show_paris_tourism(ndx) {
         // .xAxisLabel('Arrivals Per Year')
         .elasticY(true)
         .yAxis().ticks(4)
+        
+    dc.pieChart('#paris-foods')
+        .width(322)
+        .radius(90)
+        .dimension(favourite_foods_dim)
+        .group(favourite_foods_votes)
 }
 
 function show_santorini_tourism(ndx) {
@@ -80,8 +89,10 @@ function show_santorini_tourism(ndx) {
     // create our dimension, in this case
     // i pluck the destination column of the CSV
     var year_dim = ndx.dimension(dc.pluck('year'));
-    // group the data on destination dim
+    var favourite_foods_dim = ndx.dimension(dc.pluck('favourite.foods'));
+    // group the data on tourist.arrivals dim
     var arrivals_per_year = year_dim.group().reduceSum(dc.pluck('tourist.arrivals'));
+    var favourite_foods_votes = favourite_foods_dim.group().reduceSum(dc.pluck('favourite.foods.votes'));
     
     // use dc.barChart to create bar chart
     dc.barChart('#santorini-tourism')
@@ -96,6 +107,12 @@ function show_santorini_tourism(ndx) {
         // .xAxisLabel('Arrivals Per Year')
         .elasticY(true)
         .yAxis().ticks(4)
+    
+    dc.pieChart('#santorini-foods')
+        .width(322)
+        .radius(90)
+        .dimension(favourite_foods_dim)
+        .group(favourite_foods_votes)
 }
 
 function show_rome_tourism(ndx) {
@@ -103,8 +120,10 @@ function show_rome_tourism(ndx) {
     // create our dimension, in this case
     // i pluck the destination column of the CSV
     var year_dim = ndx.dimension(dc.pluck('year'));
-    // group the data on destination dim
+    var favourite_foods_dim = ndx.dimension(dc.pluck('favourite.foods'));
+    // group the data on tourist.arrivals dim
     var arrivals_per_year = year_dim.group().reduceSum(dc.pluck('tourist.arrivals'));
+    var favourite_foods_votes = favourite_foods_dim.group().reduceSum(dc.pluck('favourite.foods.votes'));
     
     // use dc.barChart to create bar chart
     dc.barChart('#rome-tourism')
@@ -119,4 +138,10 @@ function show_rome_tourism(ndx) {
         // .xAxisLabel('Arrivals Per Year')
         .elasticY(true)
         .yAxis().ticks(4)
+    
+    dc.pieChart('#rome-foods')
+        .width(322)
+        .radius(90)
+        .dimension(favourite_foods_dim)
+        .group(favourite_foods_votes)
 }
