@@ -337,4 +337,7 @@ nav.navbar .navbar-brand {
 #select-destination {
   display: none; }
 
+.dc-chart {
+  pointer-events: none; }
+
 /*# sourceMappingURL=main.css.map */
