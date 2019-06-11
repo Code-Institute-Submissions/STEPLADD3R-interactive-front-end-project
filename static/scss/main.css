@@ -321,4 +321,20 @@ nav.navbar .navbar-brand {
 #rome-tourism svg .axis line {
   stroke: none; }
 
+.pie-slice:nth-child(6n+1) path {
+  fill: #008489; }
+.pie-slice:nth-child(6n+2) path {
+  fill: #00767b; }
+.pie-slice:nth-child(6n+3) path {
+  fill: #00696d; }
+.pie-slice:nth-child(6n+4) path {
+  fill: #005c5f; }
+.pie-slice:nth-child(6n+5) path {
+  fill: #004f52; }
+.pie-slice:nth-child(6n+6) path {
+  fill: #004244; }
+
+#select-destination {
+  display: none; }
+
 /*# sourceMappingURL=main.css.map */

@@ -43,7 +43,7 @@ function create_locations(map, locations) {
         let locations_menu_links = locations_menu.children;
         locations_menu_links[i].setAttribute('class', 'dropdown-item');
         locations_menu_links[i].setAttribute('data-marker-id', i);
-        locations_menu_links[i].setAttribute('href', '#');
+        locations_menu_links[i].setAttribute('href', '#map');
         locations_menu_links[i].innerText = locations[i][0];
         
         let marker = new google.maps.Marker({
@@ -83,6 +83,9 @@ function external_marker_links(MARKERS) {
         if (!e.target.matches('.dropdown-item')) return;
     
         e.preventDefault();
+        
+        let element = document.getElementById('map');
+        element.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
     
         google.maps.event.trigger(MARKERS[e.target.getAttribute('data-marker-id')], 'click');
         console.log(MARKERS[e.target.getAttribute('data-marker-id')]);

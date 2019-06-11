@@ -17,3 +17,33 @@
         }
     }
 }
+
+.pie-slice {
+    &:nth-child(6n+1) path {
+        fill: $secondary-color;
+    }
+    
+    &:nth-child(6n+2) path {
+        fill: #00767b;
+    }
+    
+    &:nth-child(6n+3) path {
+        fill: #00696d;
+    }
+    
+    &:nth-child(6n+4) path {
+        fill: #005c5f;
+    }
+    
+    &:nth-child(6n+5) path {
+        fill: #004f52;
+    }
+    
+    &:nth-child(6n+6) path {
+        fill: #004244;
+    }
+}
+
+#select-destination {
+    display: none;
+}
