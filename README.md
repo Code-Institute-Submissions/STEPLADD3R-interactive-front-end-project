@@ -32,6 +32,16 @@ Here's a list of technologies used:
 5. [Cloud9/C9](https://c9.io) - IDE that I used to write my code / to run the code.
 6. [Git](https://git-scm.com/) - I used git to ensure I had proper version control.
 
+### Testing
+I tested my project on mobile, tablet and desktop using a tool called Browserstack, screenshots can be found in the testing directory.
+
+I also manually tested multiple elements of the website myself to ensure that they were working correctly, such as:
+
+1. Links on the menus, i.e. header/footer
+2. Adding a location, clicking around on the info windows
+3. Resetting the map and ensuring markers are still stored
+4. Checking visualations work correctly on click
+
 ### Deployment
 To deploy my website to Github Pages was simple. I went to settings, scrolled down to Github Pages and selected my repositories master from the source and hit save.
 
