@@ -136,6 +136,9 @@ nav.navbar .navbar-brand {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center; }
+  @media (max-width: 768px) {
+    .background--banner-top {
+      background-position: center !important; } }
   .background--banner-top:after {
     content: "";
     display: block;

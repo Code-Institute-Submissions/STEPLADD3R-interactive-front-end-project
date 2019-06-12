@@ -2,6 +2,10 @@
     background-image: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/U4GOIU-/videoblocks-paris-night-park-famous-eiffel-tower-view-panorama-4k-time-lapse-france_s-jwlcncx_thumbnail-full01.png');
     background-position: left center !important;
     @include background;
+    
+    @media (max-width: 768px) {
+        background-position: center !important;
+    }
 
     &:after {
         @include psuedo;
