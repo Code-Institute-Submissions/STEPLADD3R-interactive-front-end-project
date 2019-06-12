@@ -42,6 +42,8 @@ I also manually tested multiple elements of the website myself to ensure that th
 3. Resetting the map and ensuring markers are still stored
 4. Checking visualations work correctly on click
 
+I have also ran my web app through the W3C Validator and it has passed with only a warning (missing a h2-h6 on the testimonial block).
+
 ### Deployment
 To deploy my website to Github Pages was simple. I went to settings, scrolled down to Github Pages and selected my repositories master from the source and hit save.
 

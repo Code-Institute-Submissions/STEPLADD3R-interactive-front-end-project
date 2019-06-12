@@ -17,6 +17,9 @@ hr {
   border: 0;
   border-top: 1px solid #e3e6f0; }
 
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+  width: 100%; }
+
 .front-page--image {
   object-fit: cover;
   object-position: center;
