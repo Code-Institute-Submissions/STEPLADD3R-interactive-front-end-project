@@ -1,7 +1,13 @@
+@media (max-width: 768px) {
+  main#content {
+    margin-top: 88px; } }
 #map {
   height: 500px;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   transition: 0.25s all ease-in-out; }
+  @media (max-width: 768px) {
+    #map {
+      height: 350px; } }
 
 #map:hover {
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175); }
@@ -23,12 +29,22 @@ hr {
 .x2 {
   padding-top: 6rem !important;
   padding-bottom: 6rem !important; }
+  @media (max-width: 768px) {
+    .x2 {
+      padding-top: 2rem !important;
+      padding-bottom: 2rem !important; } }
 
 .height-85vh--lg {
   height: 85vh; }
+  @media (max-width: 768px) {
+    .height-85vh--lg {
+      height: 65vh; } }
 
 .height-15vh--lg {
   height: 15vh; }
+  @media (max-width: 768px) {
+    .height-15vh--lg {
+      height: auto; } }
 
 html, body {
   font-family: 'Roboto', sans-serif; }
@@ -48,6 +64,9 @@ p {
   letter-spacing: 0.5px;
   position: relative;
   z-index: 10; }
+  @media (max-width: 768px) {
+    .front-page--header {
+      font-size: 3rem; } }
 
 .btn.btn-primary {
   font-weight: 700;
@@ -88,6 +107,9 @@ nav.navbar {
   background-color: transparent;
   transition: 0.25s all ease-in-out;
   padding: 1.5rem 1rem; }
+  @media (max-width: 768px) {
+    nav.navbar {
+      background-color: #ff5a5f; } }
 
 nav.navbar.scrolled {
   background-color: #ff5a5f;
@@ -98,6 +120,9 @@ nav.navbar .nav-link {
 
 nav.navbar .navbar-brand {
   padding: 0; }
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>"); }
 
 .background--banner-top {
   background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/U4GOIU-/videoblocks-paris-night-park-famous-eiffel-tower-view-panorama-4k-time-lapse-france_s-jwlcncx_thumbnail-full01.png");
@@ -118,6 +143,10 @@ nav.navbar .navbar-brand {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center; }
+    @media (max-width: 768px) {
+      .background--banner-top:after {
+        height: 65vh;
+        top: 88px; } }
   .background--banner-top .container {
     position: relative;
     z-index: 2; }
@@ -141,6 +170,12 @@ nav.navbar .navbar-brand {
   background-repeat: no-repeat;
   background-position: center center; }
 
+@media (max-width: 768px) {
+  .testimonial {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem; }
+    .testimonial:nth-of-type(2) {
+      margin-top: 0; } }
 .testimonial-img {
   max-height: 100px;
   border-radius: 100px;
@@ -148,6 +183,11 @@ nav.navbar .navbar-brand {
   display: block;
   margin-left: auto;
   margin-right: auto; }
+  @media (max-width: 768px) {
+    .testimonial-img {
+      margin-bottom: 1rem;
+      margin-right: auto;
+      margin-left: 0; } }
 
 .testimonial-content p,
 .testimonial-author p {
@@ -172,6 +212,11 @@ nav.navbar .navbar-brand {
   flex-wrap: wrap;
   align-content: center;
   height: auto; }
+  @media (max-width: 568px) {
+    .place-item {
+      margin-bottom: 1rem; }
+      .place-item.rome {
+        margin-bottom: 0; } }
   .place-item:before {
     content: '';
     display: block;

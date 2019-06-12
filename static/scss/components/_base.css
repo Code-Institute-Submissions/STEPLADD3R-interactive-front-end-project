@@ -1,7 +1,13 @@
+@media (max-width: 768px) {
+  main#content {
+    margin-top: 88px; } }
 #map {
   height: 500px;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   transition: 0.25s all ease-in-out; }
+  @media (max-width: 768px) {
+    #map {
+      height: 350px; } }
 
 #map:hover {
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175); }

@@ -1,7 +1,21 @@
 @import "../helpers/_variables";
 @import "../helpers/_mixins";
 
-#map { height: 500px; box-shadow: $shadow--medium; transition: $transition--250ms; }
+@media (max-width: 768px) {
+    main#content {
+        margin-top: 88px;
+    }
+}
+
+#map {
+    height: 500px;
+    box-shadow: $shadow--medium;
+    transition: $transition--250ms;
+    
+    @media (max-width: 768px) {
+        height: 350px;
+    }
+}
 #map:hover { box-shadow: $shadow--hover; }
 hr { margin: 0; border: 0; border-top: 1px solid #e3e6f0; }
 

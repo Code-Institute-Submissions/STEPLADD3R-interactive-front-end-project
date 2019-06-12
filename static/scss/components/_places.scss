@@ -11,6 +11,14 @@
     align-content: center;
     height: auto;
     
+    @media (max-width: 568px) {
+        margin-bottom: 1rem;
+        
+        &.rome {
+            margin-bottom: 0;
+        }
+    }
+    
     &:before {
         content: '';
         display: block;

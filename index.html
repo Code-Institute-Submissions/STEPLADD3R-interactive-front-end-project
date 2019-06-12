@@ -44,13 +44,13 @@
     </header>
 
     <main id="content" role="main">
-        <section class="d-lg-flex align-items-lg-end height-85vh--lg background--banner-top">
+        <section class="d-flex align-items-center align-items-lg-end height-85vh--lg background--banner-top">
             <div class="container-fluid">
-                <div class="row justify-content-lg-between align-items-lg-center">
+                <div class="row justify-content-center justify-content-lg-between align-items-lg-center">
                     <div class="col-sm-12 col-lg-5 pl-5 pr-5">
                         <h1 class="front-page--header">We'll help you find your perfect holiday destination</h1>
                     </div>
-                    <div class="col-sm-12 col-lg-7 pr-0 mt-auto">
+                    <div class="col-sm-12 col-lg-7 pr-0 mt-auto d-none d-lg-block">
                         <img src="static/img/1400x900.png" class="img-fluid front-page--image" />
                     </div>
                 </div>
@@ -59,7 +59,7 @@
         <section class="d-lg-flex flex-row align-items-lg-center height-15vh--lg background--testimonials">
             <div class="container-fluid">
                 <div class="row justify-content-lg-between align-items-lg-center">
-                    <div class="d-lg-flex flex-row align-items-lg-center col-sm-12 col-lg-6">
+                    <div class="d-lg-flex flex-row align-items-lg-center col-sm-12 col-lg-6 testimonial">
                         <div class="col-sm-12 col-lg-3">
                             <img src="static/img/female-testimonial.jpg" class="testimonial-img" />
                         </div>
@@ -68,7 +68,7 @@
                             <div class="testimonial-author"><p>Jane, Mexico</p></div>
                         </div>
                     </div>
-                    <div class="d-lg-flex flex-row align-items-lg-center col-sm-12 col-lg-6">
+                    <div class="d-lg-flex flex-row align-items-lg-center col-sm-12 col-lg-6 testimonial">
                         <div class="col-sm-12 col-lg-3">
                             <img src="static/img/male-testimonial.jpg" class="testimonial-img" />
                         </div>
@@ -83,11 +83,11 @@
 
         <hr>
 
-        <section id="section-map" class="background--map mt-5 mb-5">
+        <section id="section-map" class="background--map mt-3 mb-3 mt-lg-5 mb-lg-5">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
-                        <h1 class="title text-center mb-5">Popular Locations</h1>
+                        <h1 class="title text-center mb-3 mb-lg-5">Popular Locations</h1>
                     </div>
                     <div class="col-sm-12 col-md-6 mb-3">
                         <div id="place-search">
@@ -117,7 +117,7 @@
                         </style>
                         
                         <div id="map"></div>
-                        <p class="text-center mt-5"><a id="reset-button" class="btn btn-primary map">Reset the Map</a></p>
+                        <p class="text-center mt-3 mt-lg-5"><a id="reset-button" class="btn btn-primary map">Reset the Map</a></p>
                     </div>
                 </div>
             </div>
@@ -125,7 +125,7 @@
         
         <hr>
         
-        <section id="section-places" class="background--places pt-5 pb-5 x2">
+        <section id="section-places" class="background--places pt-3 pb-3 pt-lg-5 pb-lg-5 x2">
             <div class="container">
                 <div class="row places-wrap">
                     <div class="col-sm-12 col-md-6 col-lg-4">
@@ -170,13 +170,13 @@
     </main>
     
     <footer id="footer">
-        <section id="section-footer" class="background--footer pt-5 pb-5">
+        <section id="section-footer" class="background--footer pt-3 pb-3 pt-lg-5 pb-lg-5">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-12 col-md-3 text-center">
+                    <div class="col-sm-12 col-md-3 text-left text-lg-center">
                         <a href="#!" class="navbar-brand"><i class="fas fa-map-marker-alt fa-3x" style="color: white;"></i></a>
                     </div>
-                    <div class="col-sm-12 col-md-3">
+                    <div class="col-sm-12 col-md-3 mt-3 mb-3 mt-lg-0 mb-lg-0">
                         <h3 class="footer-title">Places</h3>
                         <ul class="footer-ul">
                             <li><a href="#paris" data-mfp-src="#paris" class="open-popup-link" data-destination="paris">Paris</a></li>
@@ -184,14 +184,14 @@
                             <li><a href="#rome" data-mfp-src="#rome" class="open-popup-link" data-destination="rome">Rome</a></li>
                         </ul>
                     </div>
-                    <div class="col-sm-12 col-md-3">
+                    <div class="col-sm-12 col-md-3 mt-3 mb-3 mt-lg-0 mb-lg-0">
                         <h3 class="footer-title">Help</h3>
                         <ul class="footer-ul">
                             <li><a href="mailto:emailus@codeinstituteproject.net">Email Address</a></li>
                             <li><a href="tel:01234567890">01234 567 890</a></li>
                         </ul>
                     </div>
-                    <div class="col-sm-12 col-md-3">
+                    <div class="col-sm-12 col-md-3 mt-3 mb-3 mt-lg-0 mb-lg-0">
                         <h3 class="footer-title">Social Media</h3>
                         <ul class="footer-ul social-links">
                             <li><a href="#!" target="_blank" rel="noopener"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>

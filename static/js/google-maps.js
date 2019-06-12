@@ -88,7 +88,6 @@ function external_marker_links(MARKERS) {
         element.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
     
         google.maps.event.trigger(MARKERS[e.target.getAttribute('data-marker-id')], 'click');
-        console.log(MARKERS[e.target.getAttribute('data-marker-id')]);
     });
     // 
 }

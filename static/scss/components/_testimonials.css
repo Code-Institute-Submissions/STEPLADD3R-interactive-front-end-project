@@ -1,19 +1,21 @@
 /*
 Error: Undefined variable: "$shadow--light".
-        on line 4 of /home/ubuntu/workspace/static/scss/components/_testimonials.scss
+        on line 15 of /home/ubuntu/workspace/static/scss/components/_testimonials.scss
 
-1: .testimonial-img {
-2:     max-height: 100px;
-3:     border-radius: 100px;
-4:     box-shadow: $shadow--light;
-5:     @include push--auto;
-6: }
-7: 
-8: .testimonial-content p,
-9: .testimonial-author p {
+10: }
+11: 
+12: .testimonial-img {
+13:     max-height: 100px;
+14:     border-radius: 100px;
+15:     box-shadow: $shadow--light;
+16:     @include push--auto;
+17:     
+18:     @media (max-width: 768px) {
+19:         margin-bottom: 1rem;
+20:         margin-right: auto;
 
 Backtrace:
-/home/ubuntu/workspace/static/scss/components/_testimonials.scss:4
+/home/ubuntu/workspace/static/scss/components/_testimonials.scss:15
 /nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/tree/variable.rb:49:in `_perform'
 /nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/tree/node.rb:58:in `perform'
 /nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:397:in `visit_prop'
@@ -63,4 +65,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$shadow--light\".\A         on line 4 of /home/ubuntu/workspace/static/scss/components/_testimonials.scss\A \A 1: .testimonial-img {\A 2:     max-height: 100px;\A 3:     border-radius: 100px;\A 4:     box-shadow: $shadow--light;\A 5:     @include push--auto;\A 6: }\A 7: \A 8: .testimonial-content p,\A 9: .testimonial-author p {"; }
+  content: "Error: Undefined variable: \"$shadow--light\".\A         on line 15 of /home/ubuntu/workspace/static/scss/components/_testimonials.scss\A \A 10: }\A 11: \A 12: .testimonial-img {\A 13:     max-height: 100px;\A 14:     border-radius: 100px;\A 15:     box-shadow: $shadow--light;\A 16:     @include push--auto;\A 17:     \A 18:     @media (max-width: 768px) {\A 19:         margin-bottom: 1rem;\A 20:         margin-right: auto;"; }

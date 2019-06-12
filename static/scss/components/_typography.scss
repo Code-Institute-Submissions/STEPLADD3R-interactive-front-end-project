@@ -21,4 +21,8 @@ p {
     letter-spacing: 0.5px;
     position: relative;
     z-index: 10;
+    
+    @media (max-width: 768px) {
+        font-size: 3rem;
+    }
 }
