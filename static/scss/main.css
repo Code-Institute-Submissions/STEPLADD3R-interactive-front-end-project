@@ -124,6 +124,12 @@ nav.navbar .navbar-brand {
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>"); }
 
+.dropdown-menu {
+  background: transparent;
+  border: 0; }
+  .dropdown-menu .dropdown-item {
+    color: #fff; }
+
 .background--banner-top {
   background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/U4GOIU-/videoblocks-paris-night-park-famous-eiffel-tower-view-panorama-4k-time-lapse-france_s-jwlcncx_thumbnail-full01.png");
   background-position: left center !important;
