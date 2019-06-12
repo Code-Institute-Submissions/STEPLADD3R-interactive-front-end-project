@@ -313,6 +313,9 @@ nav.navbar .navbar-brand {
   max-width: 1152px;
   margin: 2rem auto;
   min-height: 300px; }
+  @media (max-width: 768px) {
+    .white-popup {
+      padding: 1rem; } }
 
 .mfp-close-btn-in .mfp-close {
   width: 44px;
