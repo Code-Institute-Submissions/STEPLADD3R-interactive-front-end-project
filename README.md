@@ -56,3 +56,7 @@ Currently there is no difference between the deployment version and the developm
 [Crossfilter](https://square.github.io/crossfilter/) - Used for Data Visualisation  
 [Tippy](https://atomiks.github.io/tippyjs/) - Used for setting up tooltips  
 [Magnific Popup](https://dimsemenov.com/plugins/magnific-popup/) - Used for creating the popup modals  
+
+The location information was sourced from two separate places, the brief description of the city was sourced from WikiPedia, and the description for the 'main attractions' sourced from the sidebar on Google (called the Knowledge Panel I believe).
+
+All images were sources from Google as this is not a live site, if it were I would search for royalty free imagery.
