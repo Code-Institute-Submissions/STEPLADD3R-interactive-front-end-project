@@ -6,7 +6,7 @@ queue()
     .defer(d3.csv, 'static/data/tourism-arrivals.csv')
     // then call the await method which takes one argument
     // the name of the function to call once the data is downloaded
-    .await(makeGraphs)
+    .await(makeGraphs);
     
 // then create the function, which takes two arguments
 // the first is error
@@ -75,13 +75,13 @@ function show_paris_tourism(ndx) {
         .xUnits(dc.units.ordinal)
         // .xAxisLabel('Arrivals Per Year')
         .elasticY(true)
-        .yAxis().ticks(4)
+        .yAxis().ticks(4);
         
     dc.pieChart('#paris-foods')
         .width(322)
         .radius(90)
         .dimension(favourite_foods_dim)
-        .group(favourite_foods_votes)
+        .group(favourite_foods_votes);
 }
 
 function show_santorini_tourism(ndx) {
@@ -106,13 +106,13 @@ function show_santorini_tourism(ndx) {
         .xUnits(dc.units.ordinal)
         // .xAxisLabel('Arrivals Per Year')
         .elasticY(true)
-        .yAxis().ticks(4)
+        .yAxis().ticks(4);
     
     dc.pieChart('#santorini-foods')
         .width(322)
         .radius(90)
         .dimension(favourite_foods_dim)
-        .group(favourite_foods_votes)
+        .group(favourite_foods_votes);
 }
 
 function show_rome_tourism(ndx) {
@@ -137,11 +137,11 @@ function show_rome_tourism(ndx) {
         .xUnits(dc.units.ordinal)
         // .xAxisLabel('Arrivals Per Year')
         .elasticY(true)
-        .yAxis().ticks(4)
+        .yAxis().ticks(4);
     
     dc.pieChart('#rome-foods')
         .width(322)
         .radius(90)
         .dimension(favourite_foods_dim)
-        .group(favourite_foods_votes)
+        .group(favourite_foods_votes);
 }

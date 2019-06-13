@@ -44,6 +44,8 @@ I also manually tested multiple elements of the website myself to ensure that th
 
 I have also ran my web app through the W3C Validator and it has passed with only a warning (missing a h2-h6 on the testimonial block).
 
+I have also ran my JS through a linter (JSHint) and it comes back with no errors, it does have a couple of minor warnings but no errors.
+
 ### Deployment
 To deploy my website to Github Pages was simple. I went to settings, scrolled down to Github Pages and selected my repositories master from the source and hit save.
 
