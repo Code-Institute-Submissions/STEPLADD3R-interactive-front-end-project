@@ -32,22 +32,18 @@
     }
     
     &.paris {
-        background-image: url('https://i.ytimg.com/vi/_FYKIhJZdaI/maxresdefault.jpg');
+        background-image: url('../img/paris.jpg');
         @include background;
     }
     
     &.santorini {
-        background-image: url('https://www.telegraph.co.uk/content/dam/Travel/Destinations/Europe/Greece/Santorini/Santorini%20lead-xlarge.jpg');
+        background-image: url('../img/santorini.jpg');
         @include background;
     }
     
     &.rome {
-        background-image: url('https://www.hellomagazine.com/imagenes/travel/2018061449462/things-to-do-in-rome-3-days/0-243-749/Colosseum-Rome-t.jpg');
+        background-image: url('../img/rome.jpg');
         @include background;
-    }
-    
-    &.barcelona {
-        background-image: url('http://travelpicker.com/wp-content/uploads/2015/12/shutterstock_101032684-f-380x380.jpg');
     }
 
     &:hover {

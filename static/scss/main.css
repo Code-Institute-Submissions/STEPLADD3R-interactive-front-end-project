@@ -134,7 +134,7 @@ nav.navbar .navbar-brand {
     .navbar .dropdown-menu .dropdown-item {
       color: #fff; } }
 .background--banner-top {
-  background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/U4GOIU-/videoblocks-paris-night-park-famous-eiffel-tower-view-panorama-4k-time-lapse-france_s-jwlcncx_thumbnail-full01.png");
+  background-image: url("../img/main-banner.png");
   background-position: left center !important;
   background-size: cover;
   background-repeat: no-repeat;
@@ -242,22 +242,20 @@ nav.navbar .navbar-brand {
     background-repeat: no-repeat;
     background-position: center center; }
   .place-item.paris {
-    background-image: url("https://i.ytimg.com/vi/_FYKIhJZdaI/maxresdefault.jpg");
+    background-image: url("../img/paris.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center; }
   .place-item.santorini {
-    background-image: url("https://www.telegraph.co.uk/content/dam/Travel/Destinations/Europe/Greece/Santorini/Santorini%20lead-xlarge.jpg");
+    background-image: url("../img/santorini.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center; }
   .place-item.rome {
-    background-image: url("https://www.hellomagazine.com/imagenes/travel/2018061449462/things-to-do-in-rome-3-days/0-243-749/Colosseum-Rome-t.jpg");
+    background-image: url("../img/rome.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center; }
-  .place-item.barcelona {
-    background-image: url("http://travelpicker.com/wp-content/uploads/2015/12/shutterstock_101032684-f-380x380.jpg"); }
   .place-item:hover {
     position: relative;
     z-index: 2;

@@ -4,7 +4,7 @@ Error: Undefined mixin 'background'.
         from line 4 of /home/ubuntu/workspace/static/scss/components/_backgrounds.scss
 
 1: .background--banner-top {
-2:     background-image: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/U4GOIU-/videoblocks-paris-night-park-famous-eiffel-tower-view-panorama-4k-time-lapse-france_s-jwlcncx_thumbnail-full01.png');
+2:     background-image: url('../img/main-banner.png');
 3:     background-position: left center !important;
 4:     @include background;
 5:     
@@ -67,4 +67,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'background'.\A         on line 4 of /home/ubuntu/workspace/static/scss/components/_backgrounds.scss, in `background'\A         from line 4 of /home/ubuntu/workspace/static/scss/components/_backgrounds.scss\A \A 1: .background--banner-top {\A 2:     background-image: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/U4GOIU-/videoblocks-paris-night-park-famous-eiffel-tower-view-panorama-4k-time-lapse-france_s-jwlcncx_thumbnail-full01.png');\A 3:     background-position: left center !important;\A 4:     @include background;\A 5:     \A 6:     @media (max-width: 768px) {\A 7:         background-position: center !important;\A 8:     }\A 9: "; }
+  content: "Error: Undefined mixin 'background'.\A         on line 4 of /home/ubuntu/workspace/static/scss/components/_backgrounds.scss, in `background'\A         from line 4 of /home/ubuntu/workspace/static/scss/components/_backgrounds.scss\A \A 1: .background--banner-top {\A 2:     background-image: url('../img/main-banner.png');\A 3:     background-position: left center !important;\A 4:     @include background;\A 5:     \A 6:     @media (max-width: 768px) {\A 7:         background-position: center !important;\A 8:     }\A 9: "; }
