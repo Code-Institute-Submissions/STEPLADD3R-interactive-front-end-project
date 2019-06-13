@@ -27,12 +27,14 @@ nav.navbar .navbar-brand {
 }
 
 @media (max-width: 768px) {
-    .dropdown-menu {
-        background: transparent;
-        border: 0;
-        
-        .dropdown-item {
-            color: #fff;
+    .nav {
+        .dropdown-menu {
+            background: transparent;
+            border: 0;
+            
+            .dropdown-item {
+                color: #fff;
+            }
         }
     }
 }
