@@ -4,6 +4,11 @@
 ### Project Overview
 I was tasked with creating one of three things, I decided to go with the Google Maps challenge as I thought it'd be something that I'd be utilising more often than the other two projects for my intended line of work. Nevertheless, I wanted to try to incorporate the Data Visualisation into my Google Maps app anyway, because I thought of the idea of a place where the user can come, and see places that are great for holiday destinations, be able to visually see on the map what amenities etc. there are around the towns/cities and also be able to view more information. The additional information, I thought would be cool to show as data visualisations, so that's where the two tied together.
 
+### User Stories
+As the owner of the website, I'd like to help people find their ideal holidays by offering a way for them to find tourist attractions and show them information regarding the destination so that they can make an informed decision on where to travel. In the future, maybe I could monetize the website via ads, or offer a link through to airlines with an affiliated link.
+
+As a user of the website, I need to be able to filter for locations to visit and find attractions near to the locations I plan on visiting. This would allow me to make an informed decision on where to stay and what to do.
+
 ### UX
 This website was designed with the user in mind, I have tried to add links on multiple different locations in the page to ensure the user always has access to the places at their fingertips.
 
