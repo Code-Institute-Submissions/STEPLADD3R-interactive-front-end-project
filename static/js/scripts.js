@@ -15,5 +15,12 @@
         type: 'inline',
         midClick: true,
     });
+
+    // Handle searching location if empty
+    $('#place-search-button').on('click', function() {
+        if( $('#place-search-box').val() == '' || $('.filter-option-inner-inner').text() == 'Nothing selected' ) {
+            alert('Please ensure that you have entered a destination and selected some attraction types!');
+        }
+    });
     
 })( jQuery );
