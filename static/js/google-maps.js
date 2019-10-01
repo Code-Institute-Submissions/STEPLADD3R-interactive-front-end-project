@@ -204,6 +204,6 @@ function reset_map(map) {
     });
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+window.addEventListener('load', function() {
     initialize();
 });
