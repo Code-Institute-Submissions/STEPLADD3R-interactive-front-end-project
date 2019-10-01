@@ -1,6 +1,7 @@
 let map;
 const MARKERS = []; // Update -- append markers to menu
 let markers = [];
+let place_types = ['amusement_park', 'art_gallery', 'bar', 'museum', 'night_club', 'shopping_mall', 'zoo'];
 
 function initialize() {
     let center = new google.maps.LatLng(47.5260, 15.2551);
@@ -66,7 +67,7 @@ function get_markers(map, marker) {
         let request = {
             location: this.position,
             radius: 8047 * 2,
-            types: document.getElementById('place-types-select').addEventListener('change', function(){ this.value; }),
+            types: ['amusement_park', 'art_gallery', 'bar', 'museum', 'night_club', 'shopping_mall', 'zoo'],
             fields: ['name', 'formatted_address', 'website',],
         };
 
@@ -170,7 +171,7 @@ function geocode(search_box_input, locations) {
             let request = {
                 location: {lat:lat, lng:lng},
                 radius: 8047 * 2,
-                types: document.getElementById('place-types-select').addEventListener('change', function(){ this.value; }),
+                types: place_types,
                 fields: ['name', 'formatted_address', 'website',],
             };
     
