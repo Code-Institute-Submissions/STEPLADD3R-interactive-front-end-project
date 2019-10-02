@@ -257,7 +257,5 @@ window.addEventListener('load', function() {
         } else {
             alert('Sorry, there has been an error. Please try again');
         }
-
-        console.log(place_types);
     });
 });
