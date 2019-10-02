@@ -6,9 +6,9 @@
     tippy(elements);
     
     // Change header colour
-    $(window).scroll(function() {
-        $('nav').toggleClass('scrolled', $(this).scrollTop() > 5);
-    });
+    // $(window).scroll(function() {
+    //     $('nav').toggleClass('scrolled', $(this).scrollTop() > 5);
+    // });
     
     // MFP
     $('.open-popup-link').magnificPopup({

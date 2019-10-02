@@ -106,6 +106,9 @@ p {
   text-align: center;
   color: #fff; }
 
+.fixed-top {
+  position: absolute !important; }
+
 nav.navbar {
   background-color: transparent;
   transition: 0.25s all ease-in-out;
