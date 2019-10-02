@@ -251,7 +251,7 @@ window.addEventListener('load', function() {
 
         let filter_value = filter.firstElementChild.firstElementChild.firstElementChild.textContent;
 
-        if (filter_value != 'Filter the results? Otherwise all will be ticked.') {
+        if (filter_value != 'Filter the results? Otherwise all will be ticked.' || filter_value != 'Nothing selected') {
             let filter_value_split = filter_value.split(', ');
 
             for ( i = 0; i < filter_value_split.length; i++ ) {
