@@ -235,6 +235,7 @@ function reset_map(map) {
         map.setCenter({lat:47.5260, lng:15.2551});
 
         clear_markers(markers);
+        place_types = ['amusement_park', 'art_gallery', 'bar', 'museum', 'night_club', 'shopping_mall', 'zoo']; // reset place_types
     });
 }
 
