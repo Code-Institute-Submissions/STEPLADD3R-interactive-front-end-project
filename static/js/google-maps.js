@@ -180,6 +180,8 @@ function geocode(search_box_input, locations) {
             let service = new google.maps.places.PlacesService(map);
             service.nearbySearch(request, callback);
             //
+
+            console.log(typeof place_types);
         }
     });
 }
@@ -207,4 +209,22 @@ function reset_map(map) {
 
 window.addEventListener('load', function() {
     initialize();
+
+    let filter = document.querySelector('[data-id]');
+
+    document.getElementById('place-types-select').addEventListener('change', function() {
+        place_types = [];
+
+        let filter_value = filter.firstElementChild.firstElementChild.firstElementChild.textContent;
+
+        if (filter_value != 'Nothing selected') {
+            let filter_value_split = filter_value.split(', ');
+
+            for ( i = 0; i < filter_value_split.length; i++ ) {
+                place_types.push(filter_value_split[i].replace(/\s+/g,'_').toLowerCase());
+            }
+        } else {
+            alert('Sorry, there has been an error. Please try again');
+        }
+    });
 });
