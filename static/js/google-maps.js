@@ -243,13 +243,15 @@ window.addEventListener('load', function() {
     initialize();
 
     let filter = document.querySelector('[data-id]');
+    let filter_text = document.querySelector('.filter-option-inner-inner');
+    filter_text.innerHTML = 'Filter the results? Otherwise all will be ticked.';
 
     document.getElementById('place-types-select').addEventListener('change', function() {
         place_types = [];
 
         let filter_value = filter.firstElementChild.firstElementChild.firstElementChild.textContent;
 
-        if (filter_value != 'Nothing selected') {
+        if (filter_value != 'Filter the results? Otherwise all will be ticked.') {
             let filter_value_split = filter_value.split(', ');
 
             for ( i = 0; i < filter_value_split.length; i++ ) {
