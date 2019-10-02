@@ -64,17 +64,34 @@ function get_markers(map, marker) {
         map.setZoom(12);
         map.setCenter(this.position);
 
-        let request = {
-            location: this.position,
-            radius: 8047 * 2,
-            types: ['amusement_park', 'art_gallery', 'bar', 'museum', 'night_club', 'shopping_mall', 'zoo'],
-            fields: ['name', 'formatted_address', 'website',],
-        };
+        if (typeof place_types != 'undefined') {
+            for (var i = 0; i < place_types.length; i++) {
+                place_types[i] = {
+                    location: this.position,
+                    radius: 8047 * 2,
+                    type: [place_types[i]],
+                    fields: ['name', 'formatted_address', 'website',],
+                };
+            }
+        } else {
+            let request = {
+                location: this.position,
+                radius: 8047 * 2,
+                fields: ['name', 'formatted_address', 'website',],
+            };
+        }
 
         let infowindow = new google.maps.InfoWindow();
 
         let service = new google.maps.places.PlacesService(map);
-        service.nearbySearch(request, callback);
+
+        if (typeof place_types != 'undefined') {
+            for (var i = 0; i < place_types.length; i++) {
+                service.nearbySearch(place_types[i], callback);
+            }
+        } else {
+            service.nearbySearch(request, callback);
+        }
     });
 }
 
@@ -168,20 +185,34 @@ function geocode(search_box_input, locations) {
             map.setZoom(12);
             map.setCenter({lat:lat, lng:lng});
     
-            let request = {
-                location: {lat:lat, lng:lng},
-                radius: 8047 * 2,
-                types: place_types,
-                fields: ['name', 'formatted_address', 'website',],
-            };
+            if (typeof place_types != 'undefined') {
+                for (var i = 0; i < place_types.length; i++) {
+                    place_types[i] = {
+                        location: {lat:lat, lng:lng},
+                        radius: 8047 * 2,
+                        type: [place_types[i]],
+                        fields: ['name', 'formatted_address', 'website',],
+                    };
+                }
+            } else {
+                let request = {
+                    location: {lat:lat, lng:lng},
+                    radius: 8047 * 2,
+                    fields: ['name', 'formatted_address', 'website',],
+                };
+            }
     
             let infowindow = new google.maps.InfoWindow();
     
             let service = new google.maps.places.PlacesService(map);
-            service.nearbySearch(request, callback);
+            if (typeof place_types != 'undefined') {
+                for (var i = 0; i < place_types.length; i++) {
+                    service.nearbySearch(place_types[i], callback);
+                }
+            } else {
+                service.nearbySearch(request, callback);
+            }
             //
-
-            console.log(typeof place_types);
         }
     });
 }
@@ -226,5 +257,7 @@ window.addEventListener('load', function() {
         } else {
             alert('Sorry, there has been an error. Please try again');
         }
+
+        console.log(place_types);
     });
 });
