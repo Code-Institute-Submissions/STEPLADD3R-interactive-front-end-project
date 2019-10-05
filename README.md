@@ -5,9 +5,29 @@
 I was tasked with creating one of three things, I decided to go with the Google Maps challenge as I thought it'd be something that I'd be utilising more often than the other two projects for my intended line of work. Nevertheless, I wanted to try to incorporate the Data Visualisation into my Google Maps app anyway, because I thought of the idea of a place where the user can come, and see places that are great for holiday destinations, be able to visually see on the map what amenities etc. there are around the towns/cities and also be able to view more information. The additional information, I thought would be cool to show as data visualisations, so that's where the two tied together.
 
 ### User Stories
-As the owner of the website, I'd like to help people find their ideal holidays by offering a way for them to find tourist attractions and show them information regarding the destination so that they can make an informed decision on where to travel. In the future, maybe I could monetize the website via ads, or offer a link through to airlines with an affiliated link.
+* A user of the website wants to be able to view locations around the world: They can do this by either viewing the popular destinations predetermined by the application or by using the search field with autocomplete on the homepage.
 
-As a user of the website, I need to be able to filter for locations to visit and find attractions near to the locations I plan on visiting. This would allow me to make an informed decision on where to stay and what to do.
+* A user would like to search for a popular location using the predefined options:
+    * The user could either use the menu at the top of the application and simply click on their chosen location, which would then scroll them down to the map, showing details about said location.
+    * Alternatively, the user could scroll down to the map, and click on the locations already predefined when the application loads.
+
+* A user would like to search for a location themselves:
+    * The user would need to scroll down to the map, and use the 'Enter a Destination' input field to begin searching, this input field has autocomplete.
+    * Then, once they are happy, simply click the large search button to find the location / attractions.
+
+* A user would like to filter their search:
+    * The user would need to scroll down to the map, and use the 'Enter a Destination' input field to begin searching, this input field has autocomplete.
+    * Then, using the dropdown to the side titled 'Filter the results', they could select as many options as they wish out of the list to filter by.
+    * Then, once they are happy, simply click the large search button to find the location / attractions.
+
+* A user would like to go back to the main map overview:
+    * The user could click on the 'Reset Map' button to be returned to the main map overview.
+
+* A user would like to view interesting facts / stats about a predefined country:
+    * The user could scroll down to the bottom of the homepage, and click on one of the three boxes to learn more about a specific country.
+    * They can see a brief overview, some popular locations and some data visualisations about cool facts such as tourism info / that countries foods of choice.
+
+* As the owner of the website, I'd like to help people find their ideal holidays by offering a way for them to find tourist attractions and show them information regarding the destination so that they can make an informed decision on where to travel. In the future, maybe I could monetize the website via ads, or offer a link through to airlines with an affiliated link.
 
 ### UX
 This website was designed with the user in mind, I have tried to add links on multiple different locations in the page to ensure the user always has access to the places at their fingertips.
