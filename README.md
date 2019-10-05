@@ -38,14 +38,23 @@ Here's a list of technologies used:
 6. [Git](https://git-scm.com/) - I used git to ensure I had proper version control.
 
 ### Testing
-I tested my project on mobile, tablet and desktop using a tool called Browserstack, screenshots can be found in the testing directory.
+To test my project, I used a tool called [Browserstack]() which allows you to access on-demand browsers, operating systems and mobile devices. Using this tool, I tested my website on multiple browsers, devices and operating systems such as:
 
-I also manually tested multiple elements of the website myself to ensure that they were working correctly, such as:
+1. iPhone (5 through to X)
+2. iPad
+3. iPad Pro
+4. Huawei P20 Pro
+5. Samsung Galaxy S10
+6. Samsung Galaxy Tab
+7. Google Chrome, Safari, Firefox, Microsoft Edge and IE11
 
-1. Links on the menus, i.e. header/footer
-2. Adding a location, clicking around on the info windows
-3. Resetting the map and ensuring markers are still stored
-4. Checking visualations work correctly on click
+I also manually tested the website myself to ensure that functions and features were working as expected, such as:
+
+1. Checking links on the menus to ensure they work (header/footer menus)
+2. Adding a location using the destination search
+3. Using filters to filter the results
+4. Resetting the map
+5. Chcecking the visualisations work correctly (i.e. tourism info/food data visualisations)
 
 I have also ran my web app through the W3C Validator and it has passed with only a warning (missing a h2-h6 on the testimonial block).
 
