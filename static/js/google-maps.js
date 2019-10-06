@@ -35,7 +35,7 @@ function initialize() {
 }
 
 function create_locations(map, locations) {
-    for (i = 0; i < locations.length; i++) {
+    for (let i = 0; i < locations.length; i++) {
         
         // Update -- append markers to menu
         const locations_menu = document.getElementById('locations-menu');
@@ -65,7 +65,7 @@ function get_markers(map, marker) {
         map.setCenter(this.position);
 
         if (typeof place_types != 'undefined') {
-            for (var i = 0; i < place_types.length; i++) {
+            for (let i = 0; i < place_types.length; i++) {
                 place_types[i] = {
                     location: this.position,
                     radius: 8047 * 2,
@@ -86,7 +86,7 @@ function get_markers(map, marker) {
         let service = new google.maps.places.PlacesService(map);
 
         if (typeof place_types != 'undefined') {
-            for (var i = 0; i < place_types.length; i++) {
+            for (let i = 0; i < place_types.length; i++) {
                 service.nearbySearch(place_types[i], callback);
             }
         } else {
@@ -112,7 +112,7 @@ function external_marker_links(MARKERS) {
 
 function callback(results, status) {
     if (status == google.maps.places.PlacesServiceStatus.OK) {
-        for (i = 0; i < results.length; i++) {
+        for (let i = 0; i < results.length; i++) {
             markers.push(create_marker(results[i]));
         }
     }
@@ -186,7 +186,7 @@ function geocode(search_box_input, locations) {
             map.setCenter({lat:lat, lng:lng});
     
             if (typeof place_types != 'undefined') {
-                for (var i = 0; i < place_types.length; i++) {
+                for (let i = 0; i < place_types.length; i++) {
                     place_types[i] = {
                         location: {lat:lat, lng:lng},
                         radius: 8047 * 2,
@@ -206,7 +206,7 @@ function geocode(search_box_input, locations) {
     
             let service = new google.maps.places.PlacesService(map);
             if (typeof place_types != 'undefined') {
-                for (var i = 0; i < place_types.length; i++) {
+                for (let i = 0; i < place_types.length; i++) {
                     service.nearbySearch(place_types[i], callback);
                 }
             } else {
@@ -218,8 +218,10 @@ function geocode(search_box_input, locations) {
 }
 
 function clear_markers(markers) {
-    for (let m in markers) {
-        markers[m].setMap(null);
+    if (typeof markers != 'undefined') {
+        for (let m in markers) {
+            markers[m].setMap(null);
+        }
     }
 
     markers = [];
@@ -254,7 +256,7 @@ window.addEventListener('load', function() {
         if (filter_value != 'Filter the results? Otherwise all will be ticked.' || filter_value != 'Nothing selected') {
             let filter_value_split = filter_value.split(', ');
 
-            for ( i = 0; i < filter_value_split.length; i++ ) {
+            for (let i = 0; i < filter_value_split.length; i++) {
                 place_types.push(filter_value_split[i].replace(/\s+/g,'_').toLowerCase());
             }
         } else {
