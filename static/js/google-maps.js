@@ -1,12 +1,11 @@
 let map;
-const MARKERS = []; // Update -- append markers to menu
+const MARKERS = [];
 let markers = [];
 let place_types = ['amusement_park', 'art_gallery', 'bar', 'museum', 'night_club', 'shopping_mall', 'zoo'];
 
 function initialize() {
     let center = new google.maps.LatLng(47.5260, 15.2551);
 
-    // moved map to global scope (for create_marker).
     map = new google.maps.Map(document.getElementById('map'), {
         center: center,
         zoom: 3,
@@ -22,22 +21,22 @@ function initialize() {
         ['Lisbon, Portugal', 38.7223, -9.1393],
         ['Barcelona, Spain', 41.3851, 2.1734],
     ];
+
+    let search_locations = [];
     
     let autocomplete = new google.maps.places.Autocomplete(document.getElementById('place-search-box'));
 
     create_locations(map, locations);
     
-    external_marker_links(MARKERS); // Update -- append markers to menu
+    external_marker_links(MARKERS);
 
-    create_locations_from_search(map, locations);
+    place_search_trigger(map, search_locations);
 
     reset_map(map);
 }
 
 function create_locations(map, locations) {
     for (let i = 0; i < locations.length; i++) {
-        
-        // Update -- append markers to menu
         const locations_menu = document.getElementById('locations-menu');
         locations_menu.appendChild(document.createElement('a'));
         
@@ -53,7 +52,21 @@ function create_locations(map, locations) {
             title: locations[i][0],
         });
         
-        MARKERS.push(marker); // Update -- append markers to menu
+        MARKERS.push(marker);
+
+        get_markers(map, marker);
+    }
+}
+
+function create_locations_from_search(map, search_locations) {
+    for (let i = 0; i < search_locations.length; i++) {
+        let marker = new google.maps.Marker({
+            position: new google.maps.LatLng(search_locations[i][1], search_locations[i][2]),
+            map: map,
+            title: search_locations[i][0],
+        });
+        
+        markers.push(marker);
 
         get_markers(map, marker);
     }
@@ -96,7 +109,6 @@ function get_markers(map, marker) {
 }
 
 function external_marker_links(MARKERS) {
-    // Update -- append markers to menu
     document.addEventListener('click', function(e) {
         if (!e.target.matches('.dropdown-item')) return;
     
@@ -107,7 +119,6 @@ function external_marker_links(MARKERS) {
     
         google.maps.event.trigger(MARKERS[e.target.getAttribute('data-marker-id')], 'click');
     });
-    // 
 }
 
 function callback(results, status) {
@@ -154,11 +165,11 @@ function create_marker(place) {
     return marker;
 }
 
-function create_locations_from_search(map, locations) {
+function place_search_trigger(map, search_locations) {
     document.getElementById('place-search-button').onclick = function() {
         const search_box_input = document.getElementById('place-search-box');
 
-        geocode(search_box_input, locations);
+        geocode(search_box_input, search_locations);
 
         google.maps.event.trigger(search_box_input, 'focus', {});
         google.maps.event.trigger(search_box_input, 'keydown', { keyCode: 13 });
@@ -168,7 +179,7 @@ function create_locations_from_search(map, locations) {
     };
 }
 
-function geocode(search_box_input, locations) {
+function geocode(search_box_input, search_locations) {
     const geocoder = new google.maps.Geocoder();
 
     geocoder.geocode({'address': search_box_input.value}, function(results, status) {
@@ -177,11 +188,10 @@ function geocode(search_box_input, locations) {
             let lat = location.lat();
             let lng = location.lng();
 
-            locations.push([search_box_input.value, lat, lng]);
+            search_locations.push([search_box_input.value, lat, lng]);
 
-            create_locations(map, locations);
+            create_locations_from_search(map, search_locations);
             
-            // New
             map.setZoom(12);
             map.setCenter({lat:lat, lng:lng});
     
@@ -212,7 +222,6 @@ function geocode(search_box_input, locations) {
             } else {
                 service.nearbySearch(request, callback);
             }
-            //
         }
     });
 }
@@ -237,7 +246,7 @@ function reset_map(map) {
         map.setCenter({lat:47.5260, lng:15.2551});
 
         clear_markers(markers);
-        place_types = ['amusement_park', 'art_gallery', 'bar', 'museum', 'night_club', 'shopping_mall', 'zoo']; // reset place_types
+        place_types = ['amusement_park', 'art_gallery', 'bar', 'museum', 'night_club', 'shopping_mall', 'zoo'];
     });
 }
 
