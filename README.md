@@ -58,7 +58,7 @@ Here's a list of technologies used:
 6. [Git](https://git-scm.com/) - I used git to ensure I had proper version control.
 
 ### Testing
-To test my project, I used a tool called [Browserstack]() which allows you to access on-demand browsers, operating systems and mobile devices. Using this tool, I tested my website on multiple browsers, devices and operating systems such as:
+To test my project, I used a tool called [Browserstack](https://www.browserstack.com/) which allows you to access on-demand browsers, operating systems and mobile devices. Using this tool, I tested my website on multiple browsers, devices and operating systems such as:
 
 1. iPhone (5 through to X)
 2. iPad
@@ -67,6 +67,8 @@ To test my project, I used a tool called [Browserstack]() which allows you to ac
 5. Samsung Galaxy S10
 6. Samsung Galaxy Tab
 7. Google Chrome, Safari, Firefox, Microsoft Edge and IE11
+
+(Please note some of the screenshots have duplicate content, it's a result of the screenshotting software).
 
 I also manually tested the website myself to ensure that functions and features were working as expected, such as:
 
