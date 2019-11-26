@@ -27,8 +27,8 @@
     // Reset select / destination on button click
     $('#reset-button').on('click', function() {
         $('#place-search-box').val('');
-        $("#place-types-select").val('default');
-        $("#place-types-select").selectpicker("refresh");
+        $('#place-types-select').val('default');
+        $('#place-types-select').selectpicker('refresh');
     });
     
 })( jQuery );
