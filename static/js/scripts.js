@@ -5,12 +5,6 @@
     let elements = document.querySelectorAll('[title]');
     tippy(elements);
     
-    // Change header colour
-    // Code has been deprecated... no longer have scroll header.
-    // $(window).scroll(function() {
-    //     $('nav').toggleClass('scrolled', $(this).scrollTop() > 5);
-    // });
-    
     // MFP
     $('.open-popup-link').magnificPopup({
         type: 'inline',
